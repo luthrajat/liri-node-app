@@ -1,3 +1,42 @@
+===================================================================================
+Keys - create a keys.js file to provide Twitter and Spotify Keys.
+===================================================================================
+
+exports.twitterKeys = {
+  consumer_key: '<somekey>',
+  consumer_secret: '<somekey>',
+  access_token_key: '<somekey>',
+  access_token_secret: '<somekey>'
+}
+
+exports.spotifyKeys = {
+  id: '<somekey>',
+  secret: '<somekey>'
+}
+
+===================================================================================
+USAGE
+===================================================================================
+
+Twitter:
+========
+1. node LIRI.js 
+2. node LIRI.js my-tweets
+3. node LIRI.js my-tweets <any twitter hander>
+
+OMDB
+====
+1. node LIRI.js
+2. node LIRI.js movie-this 
+3. node LIRI.js movie-this <any movie title>
+
+Spotify
+=======
+
+===================================================================================
+Project init
+===================================================================================
+
 RajatlMBA:liri-node-app bootcamp$ npm init
 This utility will walk you through creating a package.json file.
 It only covers the most common items, and tries to guess sensible defaults.
