@@ -70,7 +70,7 @@ var omdbQuestion = [
       return str.length > 0;
     },
     filter: function(str) {
-      return (str.length==0) ? "Mr. Nobody" : str;
+      return (str.length===0) ? "Mr. Nobody" : str; // always perfer `===` over `==`
     }
   }
 ];
@@ -84,7 +84,7 @@ var twitterQuestion = [
       return str.length > 0;
     },
     filter: function(str) {
-      return (str.length==0) ? "realDonaldTrump" : str;
+      return (str.length===0) ? "realDonaldTrump" : str;
     }
   }
 ];
@@ -112,7 +112,7 @@ handleNewRequest();
 
 function handleNewRequest() {
   var command = process.argv[2];
-  if (null==process.argv[2]) {
+  if (null===process.argv[2]) {
     askQuestion();
   } else {
     handleCommand(command);
@@ -165,7 +165,7 @@ function handleSpotify() {
 }
 
 function handleOMDB() {
-  if (null==process.argv[3]) {
+  if (null===process.argv[3]) {
       inquirer.prompt(omdbQuestion)
       	.then(function (userInput) {
             handleOMDBDisplay(userInput.movieName);
@@ -187,7 +187,7 @@ function handleOMDBDisplay(movieName) {
 }
 
 function handleTwitter() {
-  if (null==process.argv[3]) {
+  if (null===process.argv[3]) {
         inquirer.prompt(twitterQuestion)
         	.then(function (userInput) {
               handleTwitterDisplay(userInput.twitterHandler);
